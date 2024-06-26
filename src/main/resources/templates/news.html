@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech News Site - News</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+        .featured-news {
+          text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="search-form">
+        <h2>Search News</h2>
+        <form id="searchForm">
+            <label for="search">Search:</label>
+            <input type="text" id="search" name="search" required>
+            <button type="submit">Search</button>
+        </form>
+    </section>
+    <section class="featured-news">
+        <h2>Featured News</h2>
+        <div class="card">
+            <img src="../static/img/logo.png" alt="Featured News Image" style="width: 250px; height: 300px;">
+            <div class="card-content">
+                <h3>Featured Article Title</h3>
+                <p>Summary of the featured article...</p>
+            </div>
+        </div>
+    </section>
+    <section class="news-list">
+        <h2>All News</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Summary</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>News Article 1</td>
+                <td>2024-06-01</td>
+                <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>News Article 2</td>
+                <td>2024-06-02</td>
+                <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+            <!-- More table rows can be dynamically added here -->
+            </tbody>
+        </table>
+        <div class="card-container">
+            <!-- Dynamic news cards will be appended here -->
+        </div>
+        <button id="loadMoreBtn">Load More</button>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 Tech News Site</p>
+</footer>
+<script src="../static/js/scripts.js"></script>
+</body>
+</html>
