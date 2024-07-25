@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech News Site - Home</title>
-    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 </head>
@@ -12,9 +12,10 @@
 <header>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a th:href="@{/index}">Home</a></li>
+            <li><a th:href="@{/news}">News</a></li>
+            <li><a th:href="@{/contact}">Contact Us</a></li>
+            <li><a th:href="@{/login}">Login</a></li>
         </ul>
     </nav>
 </header>
@@ -28,18 +29,18 @@
         <article>
             <h3>Article</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            <img src="../static/img/global.jpg" alt="Article Image 1" style="width: 350px; height: 350px;">
+            <img th:src="@{/img/global.jpg}" alt="Article Image 1" style="width: 350px; height: 350px;">
         </article>
         <article>
             <h3>Article</h3>
             <p>Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in.</p>
-            <img src="../static/img/robot.jpg" alt="Article Image 2" style="width: 350px; height: 350px;">
+            <img th:src="@{/img/robot.jpg}" alt="Article Image 2" style="width: 350px; height: 350px;">
         </article>
     </section>
     <section class="video-content">
         <h2>Featured Video</h2>
         <video controls>
-            <source src="../static/img/techvid.mp4" type="video/mp4" style="width: 260px; height: 260px;">
+            <source th:src="@{/img/techvid.mp4}" type="video/mp4" style="width: 260px; height: 260px;">
             Your browser does not support the video tag.
         </video>
     </section>
@@ -47,6 +48,6 @@
 <footer>
     <p>&copy; 2024 Tech News Site</p>
 </footer>
-<script src="../static/js/scripts.js"></script>
+<script th:src="@{/js/scripts.js}"></script>
 </body>
 </html>
